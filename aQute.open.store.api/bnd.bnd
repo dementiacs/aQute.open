@@ -1,0 +1,24 @@
+#
+# AQUTE OPEN STORE API
+#
+
+-buildpath: \
+	osgi.enroute.base.api;version=1.0
+
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: 				\
+	A Store is a persistent collection of objects. This API is inspired by (and implemented on) \
+	Mongodb. There is a DB wich can create Store objects that are related to an object type. The \
+	Store object can provide cursors that can be used to iterate over the collection object objects or \
+	update these objects.
+
+	
+Export-Package: aQute.open.store.api
+
+
+Require-Capability: \
+	compile-only
+

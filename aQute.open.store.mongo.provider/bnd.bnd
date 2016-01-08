@@ -1,0 +1,23 @@
+Bundle-Description: \
+	An implementation of the aQute.open.store.api on top of Mongo. This provides a simple but very flexible \
+	database that is easy to use in OSGi. An added bonus is, is that the OSGi filter language can be used \
+	to query the database.
+	
+Private-Package: \
+	aQute.impl.store.mongo
+
+Conditional-Package: aQute.lib*
+Bundle-Version: 1.0.0
+
+
+-buildpath: \
+	osgi.enroute.base.api, \
+	aQute.open.store.api, \
+	biz.aQute.bndlib;version=3.0.0;packages=*,\
+	org.mongodb.mongo-java-driver;version=2.14
+   
+-testpath: \
+	osgi.enroute.junit.wrapper, \
+	aQute.dstest
+	
+Export-Package: aQute.open.store.api

@@ -1,0 +1,30 @@
+Bundle-Version: 1.1.0
+Bundle-Description: Provides DS like wiring and configuration for test cases. In the setup method, create a DummyDS, and call add.\
+ The return value is a Component, that can then be configured with $ for properties and the instance method for providing an\
+ instance. It is also possible to add a Bundle Context, this will include the OSGi framework if present while looking for services.\
+ This is obviously not a full blown DS implementation, it takes lots of shortcuts. However, it is very useful to keep your tests\
+ small.
+
+Export-Package: aQute.test.dummy.ds,\
+	aQute.test.dummy.log,\
+	aQute.service.reporter
+Conditional-Package: aQute.bnd.*, aQute.lib*
+
+	
+	
+Import-Package: org.osgi.service.component.annotations;resolution:=optional,\
+	*
+
+-buildpath: osgi.enroute.base.api;version=1.0,\
+	biz.aQute.bndlib;version=3.0.0;packages=*
+	
+-testpath: \
+	osgi.enroute.junit.wrapper
+
+-runbundles: osgi.cmpn,\
+	org.apache.felix.scr,\
+	org.apache.felix.shell,\
+	org.apache.felix.shell.tui
+
+
+-includeresource: readme.md
