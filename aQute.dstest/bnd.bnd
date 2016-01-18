@@ -1,4 +1,4 @@
-Bundle-Version: 1.1.0
+Bundle-Version: 1.1.0.${tstamp}
 Bundle-Description: Provides DS like wiring and configuration for test cases. In the setup method, create a DummyDS, and call add.\
  The return value is a Component, that can then be configured with $ for properties and the instance method for providing an\
  instance. It is also possible to add a Bundle Context, this will include the OSGi framework if present while looking for services.\
