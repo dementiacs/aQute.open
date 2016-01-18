@@ -7,7 +7,7 @@ Private-Package: \
 	aQute.impl.store.mongo
 
 Conditional-Package: aQute.lib*
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.${tstamp}
 
 
 -buildpath: \
